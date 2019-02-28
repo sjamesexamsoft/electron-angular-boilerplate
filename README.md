@@ -1,6 +1,7 @@
-# IncidentLogger
+# Electron Incident boiler plate
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+It was then augmented with Electron to create a desktop application
 
 ## Development server
 
