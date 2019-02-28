@@ -13,7 +13,8 @@
     "build": "ng build --base-href ./",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dist": "build"
   },
   "private": true,
   "dependencies": {
@@ -55,5 +56,36 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
+  },
+  "build": {
+    "appId": "com.examsoft.tbd",
+    "directories": {
+      "output": "build"
+    },
+    "extraResources": [
+      "dist/**",
+      ".env"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "type": "development"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
   }
 }
